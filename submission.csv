@@ -1,0 +1,10 @@
+row_id,normal_mild,moderate,severe
+123456_left_neural_foraminal_narrowing_l1_l2,0.80,0.15,0.05
+123456_left_neural_foraminal_narrowing_l2_l3,0.75,0.20,0.05
+123456_left_neural_foraminal_narrowing_l3_l4,0.70,0.25,0.05
+123457_right_neural_foraminal_narrowing_l1_l2,0.85,0.10,0.05
+123457_right_neural_foraminal_narrowing_l2_l3,0.80,0.15,0.05
+123457_right_neural_foraminal_narrowing_l3_l4,0.78,0.17,0.05
+123458_spinal_canal_stenosis_l1_l2,0.65,0.25,0.10
+123458_spinal_canal_stenosis_l2_l3,0.60,0.30,0.10
+123458_spinal_canal_stenosis_l3_l4,0.55,0.35,0.10
