@@ -1,26 +1,5 @@
-import os
-import pandas as pd
-
-train_image_dir = 'images/train/'
-
-image_files = ['image1.jpg', 'image2.jpg', 'image3.jpg']
-labels = [
-    {'row_id': '123456_left_neural_foraminal_narrowing_l1_l2', 'normal_mild': 0, 'moderate': 1, 'severe': 0},
-    {'row_id': '123457_right_neural_foraminal_narrowing_l2_l3', 'normal_mild': 1, 'moderate': 0, 'severe': 0},
-    {'row_id': '123458_spinal_canal_stenosis_l3_l4', 'normal_mild': 0, 'moderate': 0, 'severe': 1},
-]
-
-data = []
-for img, label in zip(image_files, labels):
-    entry = {
-        'row_id': label['row_id'],
-        'image_path': os.path.join(train_image_dir, img),
-        'normal_mild': label['normal_mild'],
-        'moderate': label['moderate'],
-        'severe': label['severe'],
-    }
-    data.append(entry)
-
-train_df = pd.DataFrame(data)
-
-train_df.to_csv('train.csv', index=False)
+row_id,image_path,normal_mild,moderate,severe
+123456_left_neural_foraminal_narrowing_l1_l2,images/train/123456_left_neural_foraminal_narrowing_l1_l2.jpg,1,0,0
+123457_right_neural_foraminal_narrowing_l2_l3,images/train/123457_right_neural_foraminal_narrowing_l2_l3.jpg,0,1,0
+123458_spinal_canal_stenosis_l3_l4,images/train/123458_spinal_canal_stenosis_l3_l4.jpg,0,0,1
+...
