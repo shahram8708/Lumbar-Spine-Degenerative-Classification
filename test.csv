@@ -1,0 +1,18 @@
+import os
+import pandas as pd
+
+test_image_dir = 'images/test/'
+
+test_image_files = ['test_image1.jpg', 'test_image2.jpg', 'test_image3.jpg']
+
+test_data = []
+for img in test_image_files:
+    entry = {
+        'row_id': os.path.splitext(img)[0],  
+        'image_path': os.path.join(test_image_dir, img),
+    }
+    test_data.append(entry)
+
+test_df = pd.DataFrame(test_data)
+
+test_df.to_csv('test.csv', index=False)
